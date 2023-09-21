@@ -72,17 +72,18 @@ h2 {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-button, input {
+button,
+input {
 	font-family: "Press Start 2P", monospace;
-font-weight: bold;
+	font-weight: bold;
 }
 
 .input-container {
 	display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
+	/* justify-content: center; */
+	align-items: center;
+	margin-top: 10px;
+	width: 100%;
 }
 .input-container * {
 	flex-grow: 1;
@@ -157,7 +158,8 @@ li button.remove-button:hover {
 	color: #fff;
 }
 
-.add-button, .purple-button {
+.add-button,
+.purple-button {
 	background-color: #f0f;
 	color: #000;
 	min-width: max-content;
@@ -172,7 +174,6 @@ li button.remove-button:hover {
 	background-color: rgb(255, 255, 0);
 	color: #000;
 	margin-right: 10px;
-	
 }
 
 .edit-button:hover {
@@ -210,7 +211,6 @@ li button.remove-button:hover {
 	cursor: pointer;
 }
 
-
 ul {
 	padding: 0;
 	list-style: none;
@@ -241,7 +241,6 @@ li {
 	font-size: 24px;
 }
 
-
 .total-players {
 	font-size: 15px;
 	color: #aaa;
@@ -252,7 +251,6 @@ li {
 }
 
 /* Estilos de videojuego retro */
-
 
 /* Main menu screen */
 
@@ -304,20 +302,20 @@ li {
 	color: #fff;
 }
 
-
 /* Game screen */
-.player-name , .victim-name {
+.player-name,
+.victim-name {
 	text-transform: uppercase;
 }
 
-button .player-name{
+button .player-name {
 	color: rgb(255, 255, 0);
 }
-.player-name{
+.player-name {
 	color: #0f0;
 }
 
-.victim-name{
+.victim-name {
 	color: rgb(255, 0, 0);
 }
 

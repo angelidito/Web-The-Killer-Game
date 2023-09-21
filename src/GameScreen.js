@@ -35,13 +35,23 @@ function GameScreen({
 	const currentPlayer = playersData.find(
 		(player) => player.order === currentPlayerId
 	);
-	
-	const victim = findPlayerNameByVictimId((currentPlayer.victim_id + 1) % playersData.length);
+
+	const victim = findPlayerNameByVictimId(
+		(currentPlayer.victim_id + 1) % playersData.length
+	);
 
 	return (
 		<div className="game-screen">
-			{console.log("victim_id is "+ (currentPlayer.victim_id + 1) % playersData.length)}
-			{console.log("THE Victim name is "+ findPlayerNameByVictimId((currentPlayer.victim_id + 1) % playersData.length))}
+			{console.log(
+				"victim_id is " +
+					((currentPlayer.victim_id + 1) % playersData.length)
+			)}
+			{console.log(
+				"THE Victim name is " +
+					findPlayerNameByVictimId(
+						(currentPlayer.victim_id + 1) % playersData.length
+					)
+			)}
 			{!showStartMessage && !showKillMessage && (
 				<div>
 					<h1>
@@ -86,10 +96,7 @@ function GameScreen({
 							{currentPlayer.player_name}
 						</span>
 						, your first victim is{" "}
-						<span className="victim-name">
-							{victim}
-						</span>
-						.
+						<span className="victim-name">{victim}</span>.
 					</p>
 					<p>
 						Once you kill your target, they must reveal their own
@@ -97,10 +104,8 @@ function GameScreen({
 					</p>
 					<p>
 						Be carefull while hunting{" "}
-						<span className="victim-name">
-							{victim}
-						</span>
-						, other people might want to kill you.
+						<span className="victim-name">{victim}</span>, other
+						people might want to kill you.
 					</p>
 					<p>
 						Good luck,{" "}
