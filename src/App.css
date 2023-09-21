@@ -1,0 +1,343 @@
+/* General styles */
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100vw;
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: "Press Start 2P", monospace;
+	font-size: 1.3em;
+	line-height: 1.5; /* Ajusta el interlineado según tus preferencias */
+}
+
+/* TV scan lines effect */
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	background-image: linear-gradient(
+		rgba(255, 0, 255, 0.2) 2px,
+		transparent 10px,
+		transparent 1px,
+		rgba(0, 0, 0, 0.532) 1px
+	);
+	background-size: 100% 8px;
+	animation: tv-scan-lines 15s linear infinite;
+	z-index: -1;
+}
+
+@keyframes tv-scan-lines {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 0 100%;
+	}
+}
+
+/* Main container */
+
+.container {
+	text-align: center;
+	padding: 20px;
+	margin: auto;
+	width: min-content;
+	width: 90vw;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(255, 0, 255, 04);
+	width: max-content;
+	max-width: 90vw;
+}
+
+/* Tittles */
+
+h1 {
+	font-size: 1.5em;
+	color: #f0f;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h2 {
+	font-size: 1.2em;
+	color: #f08;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button, input {
+	font-family: "Press Start 2P", monospace;
+font-weight: bold;
+}
+
+.input-container {
+	display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+.input-container * {
+	flex-grow: 1;
+}
+
+button {
+	height: 40px;
+	font-weight: bold;
+}
+
+input {
+	padding: 0px 20px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	margin-right: 10px;
+	flex-grow: 1;
+	background-color: rgb(255, 255, 255);
+	color: #000;
+	max-width: 80%;
+	width: 80%;
+}
+
+input:hover {
+	background-color: rgba(150, 150, 150, 0.4);
+	color: #fff;
+}
+
+input::placeholder {
+	color: rgba(100, 0, 100, 0.6);
+	font-size: 0.8em;
+}
+
+input:hover::placeholder {
+	color: rgba(200, 0, 200, 0.99);
+}
+
+/* Estilos para los botones */
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+li button {
+	padding: 5px 5px; /* Espacio interno más pequeño */
+	margin-left: 5px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+li button.remove-button {
+	background-color: #ffa7a76e;
+}
+
+li button.remove-button:hover {
+	background-color: #ffa7a7;
+}
+
+.done-button {
+	background-color: rgb(0, 255, 0);
+	color: #000;
+}
+
+.done-button:hover {
+	background-color: rgba(0, 150, 0, 0.42);
+	color: #fff;
+}
+
+.add-button, .purple-button {
+	background-color: #f0f;
+	color: #000;
+	min-width: max-content;
+}
+
+.add-button:hover {
+	background-color: rgba(150, 0, 150, 0.4);
+	color: #fff;
+}
+
+.edit-button {
+	background-color: rgb(255, 255, 0);
+	color: #000;
+	margin-right: 10px;
+	
+}
+
+.edit-button:hover {
+	background-color: rgba(150, 150, 0, 0.4);
+	color: #fff;
+}
+
+.infoEdit {
+	font-size: 14px;
+	font-style: italic;
+	color: #ddd;
+}
+
+.start-button {
+	background-color: rgb(0, 255, 0);
+	color: #000;
+}
+
+.start-button:hover {
+	margin-left: 10px;
+	background-color: rgba(0, 255, 0);
+	color: #000;
+}
+
+.start-button:hover {
+	background-color: rgba(0, 255, 0, 0.4);
+	color: #fff;
+}
+
+.emoji-button {
+	padding: 5px 5px;
+	margin-left: 5px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+ul {
+	padding: 0;
+	list-style: none;
+	list-style-type: none;
+	margin-top: 20px;
+	text-align: center;
+}
+
+li {
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.container li.player-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container li.player-list::before,
+.container li.player-list::after {
+	content: "👾";
+	margin: 0 5px;
+	font-size: 24px;
+}
+
+
+.total-players {
+	font-size: 15px;
+	color: #aaa;
+}
+.total-players-number {
+	font-size: 17px; /* Tamaño de fuente más pequeño */
+	font-weight: bold;
+}
+
+/* Estilos de videojuego retro */
+
+
+/* Main menu screen */
+
+.main-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 15px;
+}
+
+.main-menu button {
+	margin: 10px;
+	size: max-content;
+}
+.instuction-button {
+	background-color: rgb(255, 128, 0);
+	color: #000;
+}
+
+.instuction-button:hover {
+	background-color: rgba(255, 128, 0, 0.4);
+	color: #fff;
+}
+
+/* Instructions screen */
+
+.instructions {
+	/* ... (your existing styles) */
+	position: relative; /* Make sure the container is positioned */
+	padding-bottom: 2em;
+}
+
+.go-back-button {
+	position: fixed;
+	bottom: 10px; /* Adjust the distance from the bottom as needed */
+	right: 10px; /* Adjust the distance from the right as needed */
+	background-color: #f0f;
+	color: #000;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.go-back-button:hover {
+	background-color: rgba(150, 0, 150, 0.7);
+	color: #fff;
+}
+
+
+/* Game screen */
+.player-name , .victim-name {
+	text-transform: uppercase;
+}
+
+button .player-name{
+	color: rgb(255, 255, 0);
+}
+.player-name{
+	color: #0f0;
+}
+
+.victim-name{
+	color: rgb(255, 0, 0);
+}
+
+button.confirm-player {
+	background-color: #f00;
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+.swear-button {
+	margin-bottom: 15px;
+}
+
+button.confirm-player:hover {
+	background-color: rgba(150, 0, 0, 0.7);
+	color: #fff;
+}
+
+/* Game over screen */
+
+.finish-game .purple-button {
+	margin-bottom: 15px;
+}
