@@ -126,9 +126,7 @@ function App() {
 	function findPlayerNameByVictimId(victimId) {
 		var name = "AGAPITO";
 		playersData.forEach((player) => {
-			console.log(
-				player.player_name + " " + player.victim_id + " ¿=? " + victimId
-			);
+			console.log(player.player_name + " " + player.victim_id + " ¿=? " + victimId);
 			if (player.victim_id === victimId) {
 				name = player.player_name;
 			}
