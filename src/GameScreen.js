@@ -18,7 +18,7 @@ function GameScreen({
 		setTimeout(() => {
 			setShowStartMessage(false);
 			setShowKillMessage(true);
-		}, 3000);
+		}, 1300);
 	};
 
 	const handleConfirmKill = () => {
@@ -115,9 +115,13 @@ function GameScreen({
 					<p>
 						It's dangerous to go alone!
 						<br />
-						🔥&nbsp;&nbsp;&nbsp;Take this.&nbsp;&nbsp;&nbsp;🔥
+						Take this.
 					</p>
-					<p>🗡️</p>
+					<p>
+						🔥&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥
+						<br />
+						🗡️
+					</p>
 					<button
 						className="swear-button purple-button"
 						onClick={handleConfirmKill}

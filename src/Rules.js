@@ -7,7 +7,7 @@ function Rules({goBackMainMenu}) {
 				Go Back to Main Menu
 			</button>
 
-			<h1>The Killer - Game Rules:</h1>
+			<h1>The Killer Game: Rules</h1>
 
 			<h2>Objective:</h2>
 			<p>
@@ -70,14 +70,10 @@ function Rules({goBackMainMenu}) {
 			<p>The game can end in one of two ways:</p>
 			<ul>
 				<li>
-					The group decides to end the game collectively, typically
-					after a predetermined time frame or when they feel they've
-					had enough fun.
+					FIRST: the group decides to end the game collectively, typically after a predetermined time frame or when they feel they've had enough fun.
 				</li>
 				<li>
-					Only two players remain, and one of them successfully
-					"kills" the other. The surviving player is declared the
-					winner.
+					SECOND: only two players remain, and one of them successfully"kills" the other. The surviving player is declared the winner.
 				</li>
 			</ul>
 
