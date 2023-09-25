@@ -161,7 +161,16 @@ function App() {
 					<div className="finish-game">
 						<h1>The end</h1>
 						<p>All players have their target.</p>
-						<p>Good luck and stay safe!</p>
+						<p>Good luck and remember...</p>
+						<p>
+						It's dangerous to go alone!
+						<br />
+						Take this.
+						<br />
+						🔥&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥
+						<br />
+						🗡️
+					</p>
 						<button
 							className="purple-button "
 							onClick={goBackMainMenu}

@@ -3,7 +3,7 @@ import React from "react";
 function Rules({goBackMainMenu}) {
 	return (
 		<div className="instructions">
-			<button className="go-back-button" onClick={goBackMainMenu}>
+			<button className="float-go-back-button" onClick={goBackMainMenu}>
 				Go Back to Main Menu
 			</button>
 

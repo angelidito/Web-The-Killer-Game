@@ -18,7 +18,7 @@ function GameScreen({
 		setTimeout(() => {
 			setShowStartMessage(false);
 			setShowKillMessage(true);
-		}, 1300);
+		}, 1000);
 	};
 
 	const handleConfirmKill = () => {
@@ -40,11 +40,7 @@ function GameScreen({
 
 	return (
 		<div className="game-screen">
-			{/* {currentPlayer.victim_id === undefined && (
-				<h1>There is no victim_id for {currentPlayer.player_name}</h1>
-			)} */}
-			{console.log("victim_id is "+ (currentPlayer.victim_id + 1) % playersData.length)}
-			{console.log("THE Victim name is "+ findPlayerNameByVictimId((currentPlayer.victim_id + 1) % playersData.length))}
+			{/* {console.log("THE Victim name is "+ findPlayerNameByVictimId((currentPlayer.victim_id + 1) % playersData.length))} */}
 			{!showStartMessage && !showKillMessage && (
 				<div>
 					<h1>
@@ -53,7 +49,7 @@ function GameScreen({
 							{currentPlayer.player_name}
 						</span>
 					</h1>
-					<p>When you are ready, click the button below</p>
+					<p>Click the button when you are ready!</p>
 					<button className="confirm-player" onClick={startGame}>
 						I am{" "}
 						<span className="player-name">
@@ -85,16 +81,17 @@ function GameScreen({
 						!
 					</h1>
 					<p>
-						<span className="player-name">
+						{/* <span className="player-name">
 							{currentPlayer.player_name}
 						</span>
-						, your first victim is{" "}
+						, */}
+						Your first victim is{" "}
 						<span className="victim-name">
 							{victim}
 						</span>
 						.
 					</p>
-					<p>
+					{/* <p>
 						Once you kill your target, they must reveal their own
 						victim, who will become your next target.
 					</p>
@@ -121,12 +118,12 @@ function GameScreen({
 						🔥&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥
 						<br />
 						🗡️
-					</p>
+					</p> */}
 					<button
 						className="swear-button purple-button"
 						onClick={handleConfirmKill}
 					>
-						Ok! Nice!
+						Ok, understood!
 					</button>
 				</div>
 			)}
