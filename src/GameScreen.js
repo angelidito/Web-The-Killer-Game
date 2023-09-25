@@ -40,6 +40,9 @@ function GameScreen({
 
 	return (
 		<div className="game-screen">
+			{/* {currentPlayer.victim_id === undefined && (
+				<h1>There is no victim_id for {currentPlayer.player_name}</h1>
+			)} */}
 			{console.log("victim_id is "+ (currentPlayer.victim_id + 1) % playersData.length)}
 			{console.log("THE Victim name is "+ findPlayerNameByVictimId((currentPlayer.victim_id + 1) % playersData.length))}
 			{!showStartMessage && !showKillMessage && (

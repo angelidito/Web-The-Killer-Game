@@ -11,13 +11,14 @@ function App() {
 	const [addingPlayers, setAddingPlayers] = useState(false);
 	const [showInstructions, setShowInstructions] = useState(false);
 
-	const [list, setList] = useState([]);
 	const [inputValue, setInputValue] = useState("");
-	const [totalPlayers, setTotalPlayers] = useState(0);
+
+	const [list, setList] = useState([]);
 	const uniqueRandomNumbers = new Set();
+	const [playersData, setPlayersData] = useState([]);
+	const [totalPlayers, setTotalPlayers] = useState(0);
 	const [currentPlayerId, setCurrentPlayerId] = useState(0);
 
-	const [playersData, setPlayersData] = useState([]);
 
 	function generateUniqueRandomNumber(max) {
 		let randomNumber;
@@ -65,12 +66,17 @@ function App() {
 	};
 
 	const startNewGame = () => {
-		setPlayersData([]);
-		uniqueRandomNumbers.clear();
 		setList([]);
-		setMainMenu(false);
-		setAddingPlayers(true);
+		uniqueRandomNumbers.clear();
+		setPlayersData([]);
 		setTotalPlayers(0);
+		setCurrentPlayerId(0);
+
+		setMainMenu(false);
+		setFinishedGame(false);
+		setShowInstructions(false);
+		setLaunchedGame(false);
+		setAddingPlayers(true);
 	};
 
 	const toggleEditingMode = () => {
@@ -100,6 +106,7 @@ function App() {
 		setPlayersData([]);
 		uniqueRandomNumbers.clear();
 		console.log("Back to main menu");
+		
 	};
 
 	const onNextPlayer = () => {
@@ -126,7 +133,9 @@ function App() {
 	function findPlayerNameByVictimId(victimId) {
 		var name = "AGAPITO";
 		playersData.forEach((player) => {
-			console.log(player.player_name + " " + player.victim_id + " ¿=? " + victimId);
+			console.log(
+				player.player_name + " " + player.victim_id + " ¿=? " + victimId
+			);
 			if (player.victim_id === victimId) {
 				name = player.player_name;
 			}
