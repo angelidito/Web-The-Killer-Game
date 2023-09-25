@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Web-The-Killer-Game/static/css/main.a1617dfb.css",
+    "main.css": "/Web-The-Killer-Game/static/css/main.d052824d.css",
     "main.js": "/Web-The-Killer-Game/static/js/main.037e8d88.js",
     "static/js/787.d2fe22e0.chunk.js": "/Web-The-Killer-Game/static/js/787.d2fe22e0.chunk.js",
     "index.html": "/Web-The-Killer-Game/index.html",
-    "main.a1617dfb.css.map": "/Web-The-Killer-Game/static/css/main.a1617dfb.css.map",
+    "main.d052824d.css.map": "/Web-The-Killer-Game/static/css/main.d052824d.css.map",
     "main.037e8d88.js.map": "/Web-The-Killer-Game/static/js/main.037e8d88.js.map",
     "787.d2fe22e0.chunk.js.map": "/Web-The-Killer-Game/static/js/787.d2fe22e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1617dfb.css",
+    "static/css/main.d052824d.css",
     "static/js/main.037e8d88.js"
   ]
 }
