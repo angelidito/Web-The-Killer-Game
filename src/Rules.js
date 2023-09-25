@@ -3,26 +3,26 @@ import React from "react";
 function Rules({goBackMainMenu}) {
 	return (
 		<div className="instructions">
-			<button className="float-go-back-button" onClick={goBackMainMenu}>
+			{/* <button className="float-go-back-button" onClick={goBackMainMenu}>
 				Go Back to Main Menu
-			</button>
+			</button> */}
 
 			<h1>The Killer Game: Rules</h1>
 
-			<h2>Objective:</h2>
+			<h2>Objective</h2>
 			<p>
 				The objective of the game is to be the last person standing by
 				successfully "killing" your assigned target(s) while avoiding
 				being "killed" yourself.
 			</p>
 
-			<h2>Number of Players:</h2>
+			<h2>Number of Players</h2>
 			<p>
 				The game can be played with a group of players. The more
 				players, the more challenging and dynamic the game becomes.
 			</p>
 
-			<h2>Setup:</h2>
+			<h2>Setup</h2>
 			<ul>
 				<li>
 					Each player is assigned a target. This assignment should be
@@ -31,7 +31,7 @@ function Rules({goBackMainMenu}) {
 				</li>
 			</ul>
 
-			<h2>Gameplay:</h2>
+			<h2>Gameplay</h2>
 			<ul>
 				<li>
 					To "kill" your target, you must be alone with them, with no
@@ -66,7 +66,7 @@ function Rules({goBackMainMenu}) {
 				</li>
 			</ul>
 
-			<h2>Ending the Game:</h2>
+			<h2>Ending the Game</h2>
 			<p>The game can end in one of two ways:</p>
 			<ul>
 				<li>
@@ -77,7 +77,7 @@ function Rules({goBackMainMenu}) {
 				</li>
 			</ul>
 
-			<h2>Values Promoted:</h2>
+			<h2>Values Promoted</h2>
 			<p>
 				"The Killer" is designed to promote several values, including
 				collaboration, cooperation, creativity, patience, initiative,
@@ -86,7 +86,7 @@ function Rules({goBackMainMenu}) {
 				opponents.
 			</p>
 
-			<h2>Additional Tips:</h2>
+			<h2>Additional Tips</h2>
 			<ul>
 				<li>
 					Encourage players to interact with each other beyond just
@@ -111,6 +111,12 @@ function Rules({goBackMainMenu}) {
 				Enjoy playing "The Killer," and have fun socializing and
 				strategizing with your friends!
 			</p>
+			<button
+							className="purple-button "
+							onClick={goBackMainMenu}
+						>
+							Go back to main menu
+						</button>
 		</div>
 	);
 }

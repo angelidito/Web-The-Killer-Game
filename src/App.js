@@ -19,7 +19,6 @@ function App() {
 	const [totalPlayers, setTotalPlayers] = useState(0);
 	const [currentPlayerId, setCurrentPlayerId] = useState(0);
 
-
 	function generateUniqueRandomNumber(max) {
 		let randomNumber;
 		do {
@@ -102,11 +101,11 @@ function App() {
 		setAddingPlayers(false);
 		setLaunchedGame(false);
 		setFinishedGame(false);
+		setShowConfirmation(false);
 		setShowInstructions(false);
 		setPlayersData([]);
 		uniqueRandomNumbers.clear();
 		console.log("Back to main menu");
-		
 	};
 
 	const onNextPlayer = () => {
@@ -152,25 +151,75 @@ function App() {
 	// 	);
 	// 	return player ? player.player_name : null;
 	// }
+	const [showConfirmation, setShowConfirmation] = useState(false);
+	const handleConfirm = () => {
+		console.log("handleConfirm");
+		if (showInstructions) goBackMainMenu();
+		if (addingPlayers) goBackMainMenu();
+		if (launchedGame) {
+
+			setShowConfirmation(true);
+			setLaunchedGame(false);
+		}
+	};
+
+	const cancelGoBackMainMenu = () => {
+		setShowConfirmation(false);
+		setLaunchedGame(true);
+	}
 
 	return (
 		<div className="App">
+			{!mainMenu && !finishedGame && (
+				<div className="buttons-top">
+					<button
+						className="home-button purple-button"
+						onClick={handleConfirm}
+					>
+						<i class="fas fa-home"></i>
+					</button>
+				</div>
+			)}
+
 			<div className="container">
 				{showInstructions && <Rules goBackMainMenu={goBackMainMenu} />}
+				{showConfirmation && (
+					<div className="confirmation">
+						<div className="modal-content">
+							<p>
+								Do you really want to go back to the main menu?
+							</p>
+							<div className="confirmation-buttons">
+								<button
+									className="red-button"
+									onClick={goBackMainMenu}
+								>
+									Yes
+								</button>
+								<button
+									className="green-button"
+									onClick={cancelGoBackMainMenu}
+								>
+									No
+								</button>
+							</div>
+						</div>
+					</div>
+				)}
 				{finishedGame && (
 					<div className="finish-game">
 						<h1>The end</h1>
 						<p>All players have their target.</p>
 						<p>Good luck and remember...</p>
 						<p>
-						It's dangerous to go alone!
-						<br />
-						Take this.
-						<br />
-						🔥&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥
-						<br />
-						🗡️
-					</p>
+							It's dangerous to go alone!
+							<br />
+							Take this.
+							<br />
+							🔥&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥
+							<br />
+							🗡️
+						</p>
 						<button
 							className="purple-button "
 							onClick={goBackMainMenu}
@@ -191,7 +240,7 @@ function App() {
 				{addingPlayers && (
 					<div className="adding-players">
 						{!editingMode && <h1>PLAYER LIST</h1>}
-						{editingMode && <h1>📝 PLAYER LIST ✏️</h1>}
+						{editingMode && <h1>PLAYER LIST <i class="far fa-edit"></i></h1>}
 						<ul className="player-list">
 							{list.map((item, index) => (
 								<li key={index}>
@@ -237,7 +286,7 @@ function App() {
 									className="add-button"
 									onClick={handleAddItem}
 								>
-									➕ Add
+									<i class="fas fa-plus"></i> Add
 								</button>
 							</div>
 						)}
@@ -247,7 +296,7 @@ function App() {
 									onClick={toggleEditingMode}
 									className="edit-button"
 								>
-									✏️ Edit list
+									<i class="fas fa-edit"></i> Edit list
 								</button>
 							)}
 							{editingMode && (
@@ -255,7 +304,7 @@ function App() {
 									onClick={toggleEditingMode}
 									className="done-button"
 								>
-									✅ Edition done
+									<i class="far fa-check-square"></i> Edition done
 								</button>
 							)}
 							{!editingMode && totalPlayers >= 3 && (
@@ -263,7 +312,7 @@ function App() {
 									className="start-button"
 									onClick={launchGame}
 								>
-									🚀 Ready
+									<i class="fas fa-rocket"></i> Ready
 								</button>
 							)}
 						</div>
