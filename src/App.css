@@ -49,7 +49,9 @@ body::before {
 	height: 100%;
 }
 .App {
-	position: relative; /* Asegura que el div "App" sea un contexto de posicionamiento para los elementos hijos absolutos */
+	margin: auto;
+	width: min-content;
+	position: relative;
 }
 
 .home-button {
