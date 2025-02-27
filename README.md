@@ -38,7 +38,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 It will deploy the app to github pages. It will create a new branch called gh-pages and push the build folder to it. It will also update the homepage in package.json to the github pages url.
 
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
